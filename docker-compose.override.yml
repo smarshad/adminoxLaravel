@@ -1,0 +1,60 @@
+# --------------------------
+# Docker Compose Override
+# --------------------------
+# This file overrides or extends docker-compose.yml settings for local development.
+# It is automatically applied when you run `docker-compose up`.
+
+# version: "3.9"  # Optional if already defined in main docker-compose.yml
+
+services:
+
+  # --------------------------
+  # App container overrides
+  # --------------------------
+  app:
+    environment:
+      - APP_ENV=development   # Override Laravel environment to development
+      - APP_DEBUG=true        # Enable debug mode for development
+    volumes:
+      - ./src:/var/www/html   # Mount source code for live editing
+    # extra_hosts:
+    #   - "host.docker.internal:host-gateway"  # Uncomment if host networking needed
+    # Xdebug for local debugging
+    build:
+      context: .               # Build context is current folder
+      dockerfile: docker/php/Dockerfile  # Dockerfile to use for PHP container
+      args:
+        INSTALL_XDEBUG: true   # Pass build argument to install Xdebug
+
+  # --------------------------
+  # Queue worker for Laravel jobs
+  # --------------------------
+  queue:
+    build:
+      context: .
+      dockerfile: docker/php/Dockerfile
+    container_name: laravel-queue-qjadmin
+    command: php artisan queue:work  # Start Laravel queue worker
+    volumes:
+      - ./src:/var/www/html           # Mount source code for live changes
+    depends_on:
+      - mysql                         # Wait for MySQL container
+    networks:
+      - laravel                       # Same network as main app
+
+  # --------------------------
+  # Scheduler for Laravel cron jobs
+  # --------------------------
+  scheduler:
+    build:
+      context: .
+      dockerfile: docker/php/Dockerfile
+    container_name: laravel-scheduler-qjadmin
+    # Run Laravel scheduler every minute in an infinite loop
+    command: sh -c "while true; do php artisan schedule:run; sleep 60; done"
+    volumes:
+      - ./src:/var/www/html           # Mount source code
+    depends_on:
+      - mysql                         # Ensure MySQL is up
+    networks:
+      - laravel                       # Same network as main app
