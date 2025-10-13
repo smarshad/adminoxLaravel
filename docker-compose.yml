@@ -39,6 +39,8 @@ services:
       - ./src:/var/www/html  # Mount project code into container
       - ./src/storage:/var/www/html/storage  # Ensure Laravel storage is writable
       - ./src/bootstrap/cache:/var/www/html/bootstrap/cache  # Ensure cache is writable
+    # user: "1000:1000" # optional: match host user (for local dev)
+
     environment:
       APP_ENV: ${APP_ENV}  # Laravel environment (local/production)
       APP_DEBUG: ${APP_DEBUG}  # Debug mode true/false

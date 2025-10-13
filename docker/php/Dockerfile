@@ -30,6 +30,15 @@ RUN echo "alias ll='ls -alF'" >> /root/.bashrc
 # USER www-data
 WORKDIR /var/www/html
 
-# Set permissions for Laravel
-RUN chown -R www-data:www-data /var/www/html \
-    && chmod -R 755 /var/www/html
+# Ensure Laravel storage directories exist
+RUN mkdir -p /var/www/html/storage /var/www/html/bootstrap/cache
+
+# Set correct permissions for Laravel writable directories
+RUN chown -R www-data:www-data /var/www/html/storage /var/www/html/bootstrap/cache \
+    && chmod -R 775 /var/www/html/storage /var/www/html/bootstrap/cache
+
+# Optional: make the app directory readable by all but writable only by owner
+RUN chmod -R 755 /var/www/html
+
+# Switch to the www-data user (the PHP-FPM default user)
+USER www-data

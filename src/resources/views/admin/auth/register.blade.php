@@ -16,7 +16,7 @@
                             <div class="account-logo-box">
                                 <div class="text-center">
                                     <a href="{{route('login')}}">
-                                        <img src="assets/images/logo-dark.png" alt="" height="30">
+                                        <img src="{{asset('backend/images/logo-dark.png')}}" alt="" height="30">
                                     </a>
                                 </div>
                                 <h5 class="text-uppercase mb-1 mt-4">Register</h5>

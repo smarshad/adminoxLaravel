@@ -22,7 +22,7 @@
                     </ul>
                 </li>
 
-                <li>
+                <!-- <li>
                     <a href="javascript: void(0);">
                         <i class="fe-sidebar"></i>
                         <span>  Layouts </span>
@@ -35,7 +35,7 @@
                         <li><a href="layouts-small-sidebar.html">Small Sidebar</a></li>
                         <li><a href="layouts-boxed.html">Boxed</a></li>
                     </ul>
-                </li>
+                </li> -->
 
                 <li>
                     <a href="javascript: void(0);">
@@ -44,16 +44,16 @@
                         <span class="menu-arrow"></span>
                     </a>
                     <ul class="nav-second-level" aria-expanded="false">
-                        <li><a href="page-starter.html">Starter Page</a></li>
-                        <li><a href="page-login.html">Login</a></li>
-                        <li><a href="page-register.html">Register</a></li>
-                        <li><a href="page-logout.html">Logout</a></li>
-                        <li><a href="page-recoverpw.html">Recover Password</a></li>
-                        <li><a href="page-lock-screen.html">Lock Screen</a></li>
-                        <li><a href="page-confirm-mail.html">Confirm Mail</a></li>
-                        <li><a href="page-404.html">Error 404</a></li>
-                        <li><a href="page-404-alt.html">Error 404-alt</a></li>
-                        <li><a href="page-500.html">Error 500</a></li>
+                        <li><a href="{{route('pages.starter')}}">Starter Page</a></li>
+                        <li><a href="{{route('pages.login')}}">Login</a></li>
+                        <li><a href="{{route('pages.register')}}">Register</a></li>
+                        <li><a href="{{route('pages.logout')}}">Logout</a></li>
+                        <li><a href="{{route('pages.recoverpw')}}">Recover Password</a></li>
+                        <li><a href="{{route('pages.lockscreen')}}">Lock Screen</a></li>
+                        <li><a href="{{route('pages.confirmmail')}}">Confirm Mail</a></li>
+                        <li><a href="{{route('pages.notfound')}}">Error 404</a></li>
+                        <li><a href="{{route('pages.notfoundalt')}}">Error 404-alt</a></li>
+                        <li><a href="{{route('pages.500')}}">Error 500</a></li>
                     </ul>
                 </li>
 
@@ -64,21 +64,21 @@
                         <span class="menu-arrow"></span>
                     </a>
                     <ul class="nav-second-level" aria-expanded="false">
-                        <li><a href="extras-about.html">About Us</a></li>
-                        <li><a href="extras-contact.html">Contact</a></li>
-                        <li><a href="extras-companies.html">Companies</a></li>
-                        <li><a href="extras-members.html">Members</a></li>
-                        <li><a href="extras-members-2.html">Members 2</a></li>
-                        <li><a href="extras-timeline.html">Timeline</a></li>
-                        <li><a href="extras-invoice.html">Invoice</a></li>
-                        <li><a href="extras-maintenance.html">Maintenance</a></li>
-                        <li><a href="extras-coming-soon.html">Coming Soon</a></li>
-                        <li><a href="extras-faq.html">FAQ</a></li>
-                        <li><a href="extras-pricing.html">Pricing</a></li>
-                        <li><a href="extras-profile.html">Profile</a></li>
-                        <li><a href="extras-email-template.html">Email Templates</a></li>
-                        <li><a href="extras-search-result.html">Search Results</a></li>
-                        <li><a href="extras-sitemap.html">Site Map</a></li>
+                        <li><a href="{{route('extra.pages.about')}}">About Us</a></li>
+                        <li><a href="{{route('extra.pages.contact')}">Contact</a></li>
+                        <li><a href="{{route('extra.pages.companies')}">Companies</a></li>
+                        <li><a href="{{route('extra.pages.members')}">Members</a></li>
+                        <li><a href="{{route('extra.pages.members2')}}">Members2</a></li>
+                        <li><a href="{{route('extra.pages.timeline')}">Timeline</a></li>
+                        <li><a href="{{route('extra.pages.invoice')}">Invoice</a></li>
+                        <li><a href="{{route('extra.pages.maintenance')}">Maintenance</a></li>
+                        <li><a href="{{route('extra.pages.comingsoon')}}">Coming Soon</a></li>
+                        <li><a href="{{route('extra.pages.faq')}}">FAQ</a></li>
+                        <li><a href="{{route('extra.pages.pricing')}}">Pricing</a></li>
+                        <li><a href="{{route('extra.pages.profile')}}">Profile</a></li>
+                        <li><a href="{{route('extra.pages.email-template')}}">Email Templates</a></li>
+                        <li><a href="{{route('extra.pages.searcyh-result')}}">Search Results</a></li>
+                        <li><a href="{{route('extra.pages.sitemap')}}">Site Map</a></li>
                     </ul>
                 </li>
 
