@@ -91,21 +91,21 @@
                         <span class="menu-arrow"></span>
                     </a>
                     <ul class="nav-second-level" aria-expanded="false">
-                        <li><a href="email-inbox.html">Inbox</a></li>
-                        <li><a href="email-read.html">Read Email</a></li>
-                        <li><a href="email-compose.html">Compose Email</a></li>
+                        <li><a href="{{route('email.inbox')}}">Inbox</a></li>
+                        <li><a href="{{route('email.read')}}">Read Email</a></li>
+                        <li><a href="{{route('email.compose')}}">Compose Email</a></li>
                     </ul>
                 </li>
 
                 <li>
-                    <a href="calendar.html">
+                    <a href="{{route('calendar')}}">
                         <i class="fe-calendar"></i>
                         <span> Calendar </span>
                     </a>
                 </li>
 
                 <li>
-                    <a href="tickets.html">
+                    <a href="{{route('tickets')}}">
                         <i class="fe-life-buoy"></i> 
                         <span> Tickets </span>
                         <span class="badge badge-danger badge-pill float-right">New</span>
@@ -113,14 +113,14 @@
                 </li>
 
                 <li>
-                    <a href="taskboard.html">
+                    <a href="{{route('taskboard')}}">
                         <i class="fe-file-text"></i> 
                         <span> Task Board </span>
                     </a>
                 </li>
 
                 <li>
-                    <a href="todo.html">
+                    <a href="{{route('todo')}}">
                         <i class="fe-layers"></i>
                         <span> Todo </span>
                     </a>

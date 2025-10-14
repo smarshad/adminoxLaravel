@@ -138,7 +138,7 @@
                             <!-- team-member -->
                             <div class="col-sm-4">
                                 <div class="about-team-member">
-                                    <img src="assets/images/users/avatar-5.jpg" alt="team-member"
+                                    <img src="{{asset('backend/images/users/avatar-5.jpg')}}" alt="team-member"
                                         class="avatar-xl d-block mx-auto rounded-circle">
                                     <h4 class="mt-3">Daniel Syme</h4>
                                     <p>Founder</p>
@@ -148,7 +148,7 @@
                             <!-- team-member -->
                             <div class="col-sm-4">
                                 <div class="about-team-member">
-                                    <img src="assets/images/users/avatar-3.jpg" alt="team-member"
+                                    <img src="{{asset('backend/images/users/avatar-3.jpg')}}" alt="team-member"
                                         class="avatar-xl d-block mx-auto rounded-circle">
                                     <h4 class="mt-3">Patrick Coote</h4>
                                     <p>Co-Founder</p>
@@ -157,7 +157,7 @@
                             <!-- team-member -->
                             <div class="col-sm-4">
                                 <div class="about-team-member">
-                                    <img src="assets/images/users/avatar-4.jpg" alt="team-member"
+                                    <img src="{{asset('backend/images/users/avatar-4.jpg')}}" alt="team-member"
                                         class="avatar-xl d-block mx-auto rounded-circle">
                                     <h4 class="mt-3">Hugo Moncrieff</h4>
                                     <p>Creative Director</p>

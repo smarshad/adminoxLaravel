@@ -4,6 +4,7 @@ use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\Admin\LoginController as AdminLogin;
 use App\Http\Controllers\RegisterController;
 use App\Http\Controllers\PageController;
+use App\Http\Controllers\EmailController;
 use App\Http\Controllers\Admin\AdminController;
 
 Route::get('/', [AdminLogin::class, 'index'])->name('login');
@@ -42,5 +43,15 @@ Route::prefix('extra-pages')->group(function () {
     Route::get('/email-template',[PageController::class,'emailTemplate'])->name('extra.pages.email-template');
     Route::get('/search-result',[PageController::class,'searchResult'])->name('extra.pages.search-result');
     Route::get('/sitemap',[PageController::class,'sitemap'])->name('extra.pages.sitemap');
-    
 });
+
+Route::prefix('email')->group(function () {
+    Route::get('/inbox',[EmailController::class,'inbox'])->name('email.inbox');
+    Route::get('/compose',[EmailController::class,'compose'])->name('email.compose');
+    Route::get('/read',[EmailController::class,'read'])->name('email.read');
+});
+
+Route::get('/calendar',[PageController::class,'calendar'])->name('calendar');
+Route::get('/todo',[PageController::class,'todo'])->name('todo');
+Route::get('/tickets',[PageController::class,'tickets'])->name('tickets');
+Route::get('/task-board',[PageController::class,'taskboard'])->name('taskboard');

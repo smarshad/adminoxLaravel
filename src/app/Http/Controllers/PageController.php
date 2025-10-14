@@ -123,4 +123,20 @@ class PageController extends Controller
         return view('admin/extra-pages/sitemap');
     }
 
+    public function calendar(){
+        return view('admin/apps/calendar');
+    }
+
+    public function tickets(){
+        return view('admin/apps/tickets');
+    }
+
+    public function todo(){
+        return view('admin/apps/todo');
+    }
+
+    public function taskboard(){
+        return view('admin/apps/taskboard');
+    }
+
 }
