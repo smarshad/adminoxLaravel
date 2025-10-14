@@ -65,19 +65,19 @@
                     </a>
                     <ul class="nav-second-level" aria-expanded="false">
                         <li><a href="{{route('extra.pages.about')}}">About Us</a></li>
-                        <li><a href="{{route('extra.pages.contact')}">Contact</a></li>
-                        <li><a href="{{route('extra.pages.companies')}">Companies</a></li>
-                        <li><a href="{{route('extra.pages.members')}">Members</a></li>
+                        <li><a href="{{route('extra.pages.contact')}}">Contact</a></li>
+                        <li><a href="{{route('extra.pages.companies')}}">Companies</a></li>
+                        <li><a href="{{route('extra.pages.members')}}">Members</a></li>
                         <li><a href="{{route('extra.pages.members2')}}">Members2</a></li>
-                        <li><a href="{{route('extra.pages.timeline')}">Timeline</a></li>
-                        <li><a href="{{route('extra.pages.invoice')}">Invoice</a></li>
-                        <li><a href="{{route('extra.pages.maintenance')}">Maintenance</a></li>
+                        <li><a href="{{route('extra.pages.timeline')}}">Timeline</a></li>
+                        <li><a href="{{route('extra.pages.invoice')}}">Invoice</a></li>
+                        <li><a href="{{route('extra.pages.maintenance')}}">Maintenance</a></li>
                         <li><a href="{{route('extra.pages.comingsoon')}}">Coming Soon</a></li>
                         <li><a href="{{route('extra.pages.faq')}}">FAQ</a></li>
                         <li><a href="{{route('extra.pages.pricing')}}">Pricing</a></li>
                         <li><a href="{{route('extra.pages.profile')}}">Profile</a></li>
                         <li><a href="{{route('extra.pages.email-template')}}">Email Templates</a></li>
-                        <li><a href="{{route('extra.pages.searcyh-result')}}">Search Results</a></li>
+                        <li><a href="{{route('extra.pages.search-result')}}">Search Results</a></li>
                         <li><a href="{{route('extra.pages.sitemap')}}">Site Map</a></li>
                     </ul>
                 </li>

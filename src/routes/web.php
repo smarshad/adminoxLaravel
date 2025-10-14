@@ -29,5 +29,18 @@ Route::prefix('pages')->group(function () {
 Route::prefix('extra-pages')->group(function () {
     Route::get('/about',[PageController::class,'about'])->name('extra.pages.about');
     Route::get('/contact',[PageController::class,'contact'])->name('extra.pages.contact');
+    Route::get('/companies',[PageController::class,'companies'])->name('extra.pages.companies');
+    Route::get('/members',[PageController::class,'members'])->name('extra.pages.members');
+    Route::get('/members2',[PageController::class,'members2'])->name('extra.pages.members2');
+    Route::get('/timeline',[PageController::class,'timeline'])->name('extra.pages.timeline');
+    Route::get('/invoice',[PageController::class,'invoice'])->name('extra.pages.invoice');
+    Route::get('/maintenance',[PageController::class,'maintenance'])->name('extra.pages.maintenance');
+    Route::get('/comingsoon',[PageController::class,'comingsoon'])->name('extra.pages.comingsoon');
+    Route::get('/faq',[PageController::class,'faq'])->name('extra.pages.faq');
+    Route::get('/pricing',[PageController::class,'pricing'])->name('extra.pages.pricing');
+    Route::get('/profile',[PageController::class,'profile'])->name('extra.pages.profile');
+    Route::get('/email-template',[PageController::class,'emailTemplate'])->name('extra.pages.email-template');
+    Route::get('/search-result',[PageController::class,'searchResult'])->name('extra.pages.search-result');
+    Route::get('/sitemap',[PageController::class,'sitemap'])->name('extra.pages.sitemap');
     
 });
