@@ -88,3 +88,29 @@ Route::prefix('ui-lit')->group(function () {
     Route::get('/images',[PageController::class,'images'])->name('admin.ui.kit.images');
     Route::get('/bootstrap',[PageController::class,'bootstrap'])->name('admin.ui.kit.bootstrap');
 });
+
+Route::prefix('icons')->group(function(){
+    Route::get('/colored', [PageController::class, 'colored'])->name('admin.icons.colored');
+    Route::get('/dripicons', [PageController::class, 'dripicons'])->name('admin.icons.dripicons');
+    Route::get('/materialdesign', [PageController::class, 'materialdesign'])->name('admin.icons.materialdesign');
+    Route::get('/fontawesome', [PageController::class, 'fontawesome'])->name('admin.icons.fontawesome');
+    Route::get('/feather', [PageController::class, 'feather'])->name('admin.icons.feather');
+    Route::get('/simple-line', [PageController::class, 'simpleline'])->name('admin.icons.simple-line');
+    Route::get('/flags', [PageController::class, 'flags'])->name('admin.icons.flags');
+    Route::get('/file', [PageController::class, 'file'])->name('admin.icons.file');
+    Route::get('/pe7', [PageController::class, 'pe7'])->name('admin.icons.pe7');
+    Route::get('/typicons', [PageController::class, 'typicons'])->name('admin.icons.typicons');
+});
+
+Route::prefix('graphs')->group(function(){
+    Route::get('/flot', [PageController::class, 'flot'])->name('admin.graphs.flot');
+    Route::get('/morris', [PageController::class, 'morris'])->name('admin.graphs.morris');
+    Route::get('/google', [PageController::class, 'google'])->name('admin.graphs.google');
+    Route::get('/echart', [PageController::class, 'echart'])->name('admin.graphs.echart');
+    Route::get('/chartist', [PageController::class, 'chartist'])->name('admin.graphs.chartist');
+    Route::get('/chartjs', [PageController::class, 'chartjs'])->name('admin.graphs.chartjs');
+    Route::get('/c3', [PageController::class, 'c3'])->name('admin.graphs.c3');
+    Route::get('/sparkline', [PageController::class, 'sparkline'])->name('admin.graphs.sparkline');
+    Route::get('/knob', [PageController::class, 'knob'])->name('admin.graphs.knob');
+
+});

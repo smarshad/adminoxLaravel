@@ -247,4 +247,80 @@ class PageController extends Controller
         return view('admin/ui-kit/bootstrap');
     }
 
+    public function colored(){
+        return view('admin/icons/colored');
+    }
+
+    public function materialdesign(){
+        return view('admin/icons/materialdesign');
+    }
+
+    public function dripicons(){
+        return view('admin/icons/dripicons');
+    }
+
+    public function fontawesome(){
+        return view('admin/icons/fontawesome');
+    }
+
+    public function feather(){
+        return view('admin/icons/feather');
+    }
+
+    public function simpleline(){
+        return view('admin/icons/simple-line');
+    }
+
+    public function flags(){
+        return view('admin/icons/flags');
+    }
+
+    public function file(){
+        return view('admin/icons/file');
+    }
+
+    public function pe7(){
+        return view('admin/icons/pe7');
+    }
+
+    public function typicons(){
+        return view('admin/icons/typicons');
+    }
+
+    public function flot(){
+        return view('admin/graphs/flot');
+    }
+
+    public function morris(){
+        return view('admin/graphs/morris');
+    }
+
+    public function google(){
+        return view('admin/graphs/google');
+    }
+
+    public function echart(){
+        return view('admin/graphs/echart');
+    }
+
+    public function chartist(){
+        return view('admin/graphs/chartist');
+    }
+
+    public function chartjs(){
+        return view('admin/graphs/chartjs');
+    }
+
+    public function c3(){
+        return view('admin/graphs/c3');
+    }
+
+    public function sparkline(){
+        return view('admin/graphs/sparkline');
+    }
+
+    public function knob(){
+        return view('admin/graphs/knob');
+    }
+
 }

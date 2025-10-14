@@ -185,16 +185,16 @@
                     </a>
 
                     <ul class="nav-second-level" aria-expanded="false">
-                        <li><a href="icons-colored.html">Colored Icons</a></li>
-                        <li><a href="icons-materialdesign.html">Material Design</a></li>
-                        <li><a href="icons-dripicons.html">Dripicons</a></li>
-                        <li><a href="icons-fontawesome.html">Font awesome</a></li>
-                        <li><a href="icons-feather.html">Feather Icons</a></li>
-                        <li><a href="icons-simple-line.html">Simple line Icons</a></li>
-                        <li><a href="icons-flags.html">Flag Icons</a></li>
-                        <li><a href="icons-file.html">File Icons</a></li>
-                        <li><a href="icons-pe7.html">PE7 Icons</a></li>
-                        <li><a href="icons-typicons.html">Typicons</a></li>
+                        <li><a href="{{route('admin.icons.colored')}}">Colored Icons</a></li>
+                        <li><a href="{{route('admin.icons.materialdesign')}}">Material Design</a></li>
+                        <li><a href="{{route('admin.icons.dripicons')}}">Dripicons</a></li>
+                        <li><a href="{{route('admin.icons.fontawesome')}}">Font awesome</a></li>
+                        <li><a href="{{route('admin.icons.feather')}}">Feather Icons</a></li>
+                        <li><a href="{{route('admin.icons.simple-line')}}">Simple line Icons</a></li>
+                        <li><a href="{{route('admin.icons.flags')}}">Flag Icons</a></li>
+                        <li><a href="{{route('admin.icons.file')}}">File Icons</a></li>
+                        <li><a href="{{route('admin.icons.pe7')}}">PE7 Icons</a></li>
+                        <li><a href="{{route('admin.icons.typicons')}}">Typicons</a></li>
                     </ul>
                 </li>
 
@@ -205,15 +205,15 @@
                         <span class="menu-arrow"></span>
                     </a>
                     <ul class="nav-second-level" aria-expanded="false">
-                        <li><a href="chart-flot.html">Flot Chart</a></li>
-                        <li><a href="chart-morris.html">Morris Chart</a></li>
-                        <li><a href="chart-google.html">Google Chart</a></li>
-                        <li><a href="chart-echart.html">Echarts</a></li>
-                        <li><a href="chart-chartist.html">Chartist Charts</a></li>
-                        <li><a href="chart-chartjs.html">Chartjs Chart</a></li>
-                        <li><a href="chart-c3.html">C3 Chart</a></li>
-                        <li><a href="chart-sparkline.html">Sparkline Chart</a></li>
-                        <li><a href="chart-knob.html">Jquery Knob</a></li>
+                        <li><a href="{{route('admin.graphs.flot')}}">Flot Chart</a></li>
+                        <li><a href="{{route('admin.graphs.morris')}}">Morris Chart</a></li>
+                        <li><a href="{{route('admin.graphs.google')}}">Google Chart</a></li>
+                        <li><a href="{{route('admin.graphs.echart')}}">Echarts</a></li>
+                        <li><a href="{{route('admin.graphs.chartist')}}">Chartist Charts</a></li>
+                        <li><a href="{{route('admin.graphs.chartjs')}}">Chartjs Chart</a></li>
+                        <li><a href="{{route('admin.graphs.c3')}}">C3 Chart</a></li>
+                        <li><a href="{{route('admin.graphs.sparkline')}}">Sparkline Chart</a></li>
+                        <li><a href="{{route('admin.graphs.knob')}}">Jquery Knob</a></li>
                     </ul>
                 </li>
 
