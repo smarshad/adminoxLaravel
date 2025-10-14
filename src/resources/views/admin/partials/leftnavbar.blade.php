@@ -224,18 +224,18 @@
                         <span> Forms </span>
                     </a>
                     <ul class="nav-second-level" aria-expanded="false">
-                        <li><a href="form-elements.html">Form Elements</a></li>
-                        <li><a href="form-advanced.html">Form Advanced</a></li>
-                        <li><a href="form-layouts.html">Form Layouts</a></li>
-                        <li><a href="form-validation.html">Form Validation</a></li>
-                        <li><a href="form-pickers.html">Form Pickers</a></li>
-                        <li><a href="form-wizard.html">Form Wizard</a></li>
-                        <li><a href="form-mask.html">Form Masks</a></li>
-                        <li><a href="form-summernote.html">Summernote</a></li>
-                        <li><a href="form-quilljs.html">Quilljs Editor</a></li>
-                        <li><a href="form-typeahead.html">Typeahead</a></li>
-                        <li><a href="form-x-editable.html">X Editable</a></li>
-                        <li><a href="form-uploads.html">Multiple File Upload</a></li>
+                        <li><a href="{{route('admin.form.elements')}}">Form Elements</a></li>
+                        <li><a href="{{route('admin.form.advanced')}}">Form Advanced</a></li>
+                        <li><a href="{{route('admin.form.layouts')}}">Form Layouts</a></li>
+                        <li><a href="{{route('admin.form.validation')}}">Form Validation</a></li>
+                        <li><a href="{{route('admin.form.pickers')}}">Form Pickers</a></li>
+                        <li><a href="{{route('admin.form.wizard')}}">Form Wizard</a></li>
+                        <li><a href="{{route('admin.form.mask')}}">Form Masks</a></li>
+                        <li><a href="{{route('admin.form.summernote')}}">Summernote</a></li>
+                        <li><a href="{{route('admin.form.quilljs')}}">Quilljs Editor</a></li>
+                        <li><a href="{{route('admin.form.typeahead')}}">Typeahead</a></li>
+                        <li><a href="{{route('admin.form.editable')}}">X Editable</a></li>
+                        <li><a href="{{route('admin.form.uploads')}}">Multiple File Upload</a></li>
                     </ul>
                 </li>
     
@@ -246,13 +246,13 @@
                         <span class="menu-arrow"></span>
                     </a>
                     <ul class="nav-second-level" aria-expanded="false">
-                        <li><a href="tables-basic.html">Basic Tables</a></li>
-                        <li><a href="tables-layouts.html">Tables Layouts</a></li>
-                        <li><a href="tables-datatable.html">Data Tables</a></li>
-                        <li><a href="tables-foo-tables.html">Foo Tables</a></li>
-                        <li><a href="tables-responsive.html">Responsive Table</a></li>
-                        <li><a href="tables-tablesaw.html">Tablesaw Tables</a></li>
-                        <li><a href="tables-editable.html">Editable Tables</a></li>
+                        <li><a href="{{route('admin.tables.basic')}}">Basic Tables</a></li>
+                        <li><a href="{{route('admin.tables.layouts')}}">Tables Layouts</a></li>
+                        <li><a href="{{route('admin.tables.datatable')}}">Data Tables</a></li>
+                        <li><a href="{{route('admin.tables.footables')}}">Foo Tables</a></li>
+                        <li><a href="{{route('admin.tables.responsive')}}">Responsive Table</a></li>
+                        <li><a href="{{route('admin.tables.tablesaw')}}">Tablesaw Tables</a></li>
+                        <li><a href="{{route('admin.tables.editable')}}">Editable Tables</a></li>
                     </ul>
                 </li>
 
@@ -263,9 +263,9 @@
                         <span class="menu-arrow"></span>
                     </a>
                     <ul class="nav-second-level" aria-expanded="false">
-                        <li><a href="maps-google.html">Google Maps</a></li>
-                        <li><a href="maps-vector.html">Vector Maps</a></li>
-                        <li><a href="maps-mapael.html">Mapael Maps</a></li>
+                        <li><a href="{{route('admin.maps.google')}}">Google Maps</a></li>
+                        <li><a href="{{route('admin.maps.vector')}}">Vector Maps</a></li>
+                        <li><a href="{{route('admin.maps.mapael')}}">Mapael Maps</a></li>
                     </ul>
                 </li>
 

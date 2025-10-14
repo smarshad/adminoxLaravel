@@ -4,7 +4,10 @@ use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\Admin\LoginController as AdminLogin;
 use App\Http\Controllers\RegisterController;
 use App\Http\Controllers\PageController;
+use App\Http\Controllers\FormController;
 use App\Http\Controllers\EmailController;
+use App\Http\Controllers\TableController;
+use App\Http\Controllers\MapsController;
 use App\Http\Controllers\Admin\AdminController;
 
 Route::get('/', [AdminLogin::class, 'index'])->name('login');
@@ -112,5 +115,35 @@ Route::prefix('graphs')->group(function(){
     Route::get('/c3', [PageController::class, 'c3'])->name('admin.graphs.c3');
     Route::get('/sparkline', [PageController::class, 'sparkline'])->name('admin.graphs.sparkline');
     Route::get('/knob', [PageController::class, 'knob'])->name('admin.graphs.knob');
+});
 
+Route::prefix('form')->group(function(){
+    Route::get('/elements', [FormController::class, 'elements'])->name('admin.form.elements');
+    Route::get('/advanced', [FormController::class, 'advanced'])->name('admin.form.advanced');
+    Route::get('/layouts', [FormController::class, 'layouts'])->name('admin.form.layouts');
+    Route::get('/validation', [FormController::class, 'validation'])->name('admin.form.validation');
+    Route::get('/pickers', [FormController::class, 'pickers'])->name('admin.form.pickers');
+    Route::get('/wizard', [FormController::class, 'wizard'])->name('admin.form.wizard');
+    Route::get('/mask', [FormController::class, 'mask'])->name('admin.form.mask');
+    Route::get('/summernote', [FormController::class, 'summernote'])->name('admin.form.summernote');
+    Route::get('/quilljs', [FormController::class, 'quilljs'])->name('admin.form.quilljs');
+    Route::get('/typeahead', [FormController::class, 'typeahead'])->name('admin.form.typeahead');
+    Route::get('/editable', [FormController::class, 'editable'])->name('admin.form.editable');
+    Route::get('/uploads', [FormController::class, 'uploads'])->name('admin.form.uploads');
+});
+
+Route::prefix('tables')->group(function(){
+    Route::get('/basic',[TableController::class, 'basic'])->name('admin.tables.basic');
+    Route::get('/layouts',[TableController::class, 'layouts'])->name('admin.tables.layouts');
+    Route::get('/datatable',[TableController::class, 'datatable'])->name('admin.tables.datatable');
+    Route::get('/footables',[TableController::class, 'footables'])->name('admin.tables.footables');
+    Route::get('/responsive',[TableController::class, 'responsive'])->name('admin.tables.responsive');
+    Route::get('/tablesaw',[TableController::class, 'tablesaw'])->name('admin.tables.tablesaw');
+    Route::get('/editable',[TableController::class, 'editable'])->name('admin.tables.editable');
+});
+
+Route::prefix('maps')->group(function(){
+    Route::get('/google',[MapsController::class, 'google'])->name('admin.maps.google');
+    Route::get('/vector',[MapsController::class, 'vector'])->name('admin.maps.vector');
+    Route::get('/mapael',[MapsController::class, 'mapael'])->name('admin.maps.mapael');
 });
