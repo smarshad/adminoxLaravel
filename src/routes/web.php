@@ -55,3 +55,36 @@ Route::get('/calendar',[PageController::class,'calendar'])->name('calendar');
 Route::get('/todo',[PageController::class,'todo'])->name('todo');
 Route::get('/tickets',[PageController::class,'tickets'])->name('tickets');
 Route::get('/task-board',[PageController::class,'taskboard'])->name('taskboard');
+
+Route::prefix('admin-ui')->group(function () {
+    Route::get('/grid',[PageController::class,'grid'])->name('admin.ui.grid');
+    Route::get('/sweetalert',[PageController::class,'sweetalert'])->name('admin.ui.sweetalert');
+    Route::get('/tilesbox',[PageController::class,'tilesbox'])->name('admin.ui.tilesbox');
+    Route::get('/nestable',[PageController::class,'nestable'])->name('admin.ui.nestable');
+    Route::get('/rangeslider',[PageController::class,'rangeslider'])->name('admin.ui.rangeslider');
+    Route::get('/ratings',[PageController::class,'ratings'])->name('admin.ui.ratings');
+    Route::get('/filemanager',[PageController::class,'filemanager'])->name('admin.ui.filemanager');
+    Route::get('/lightbox',[PageController::class,'lightbox'])->name('admin.ui.lightbox');
+    Route::get('/slider',[PageController::class,'slider'])->name('admin.ui.slider');
+    Route::get('/scrollbar',[PageController::class,'scrollbar'])->name('admin.ui.scrollbar');
+    Route::get('/treeview',[PageController::class,'treeview'])->name('admin.ui.treeview');
+});
+
+Route::prefix('ui-lit')->group(function () {
+    Route::get('/typography',[PageController::class,'typography'])->name('admin.ui.kit.typography');
+    Route::get('/cards',[PageController::class,'cards'])->name('admin.ui.kit.cards');
+    Route::get('/buttons',[PageController::class,'buttons'])->name('admin.ui.kit.buttons');
+    Route::get('/modals',[PageController::class,'modals'])->name('admin.ui.kit.modals');
+    Route::get('/checkbox-radio',[PageController::class,'checkboxradio'])->name('admin.ui.kit.checkbox-radio');
+    Route::get('/spinners',[PageController::class,'spinners'])->name('admin.ui.kit.spinners');
+    Route::get('/ribbons',[PageController::class,'ribbons'])->name('admin.ui.kit.ribbons');
+    Route::get('/portlets',[PageController::class,'portlets'])->name('admin.ui.kit.portlets');
+    Route::get('/tabs',[PageController::class,'tabs'])->name('admin.ui.kit.tabs');
+    Route::get('/progressbars',[PageController::class,'progressbars'])->name('admin.ui.kit.progressbars');
+    Route::get('/notifications',[PageController::class,'notifications'])->name('admin.ui.kit.notifications');
+    Route::get('/carousel',[PageController::class,'carousel'])->name('admin.ui.kit.carousel');
+    Route::get('/video',[PageController::class,'video'])->name('admin.ui.kit.video');
+    Route::get('/tooltips-popovers',[PageController::class,'tooltipspopovers'])->name('admin.ui.kit.tooltips-popovers');
+    Route::get('/images',[PageController::class,'images'])->name('admin.ui.kit.images');
+    Route::get('/bootstrap',[PageController::class,'bootstrap'])->name('admin.ui.kit.bootstrap');
+});

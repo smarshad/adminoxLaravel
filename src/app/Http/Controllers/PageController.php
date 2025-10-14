@@ -139,4 +139,112 @@ class PageController extends Controller
         return view('admin/apps/taskboard');
     }
 
+    public function grid(){
+        return view('admin/admin-ui/grid');
+    }
+
+    public function sweetalert(){
+        return view('admin/admin-ui/sweetalert');
+    }
+
+    public function tilesbox(){
+        return view('admin/admin-ui/tilesbox');
+    }
+
+    public function nestable(){
+        return view('admin/admin-ui/nestable');
+    }
+
+    public function rangeslider(){
+        return view('admin/admin-ui/rangeslider');
+    }
+    
+    public function ratings(){
+        return view('admin/admin-ui/ratings');
+    }
+
+    public function filemanager(){
+        return view('admin/admin-ui/filemanager');
+    }
+
+    public function lightbox(){
+        return view('admin/admin-ui/lightbox');
+    }
+
+    public function slider(){
+        return view('admin/admin-ui/slider');
+    }
+
+    public function scrollbar(){
+        return view('admin/admin-ui/scrollbar');
+    }
+
+    public function treeview(){
+        return view('admin/admin-ui/treeview');
+    }
+
+    public function typography(){
+        return view('admin/ui-kit/typography');
+    }
+
+    public function cards(){
+        return view('admin/ui-kit/cards');
+    }
+
+    public function buttons(){
+        return view('admin/ui-kit/buttons');
+    }
+
+    public function modals(){
+        return view('admin/ui-kit/modals');
+    }
+
+    public function checkboxradio(){
+        return view('admin/ui-kit/checkbox-radio');
+    }
+
+    public function spinners(){
+        return view('admin/ui-kit/spinners');
+    }
+
+    public function ribbons(){
+        return view('admin/ui-kit/ribbons');
+    }
+
+    public function portlets(){
+        return view('admin/ui-kit/portlets');
+    }
+
+    public function tabs(){
+        return view('admin/ui-kit/tabs');
+    }
+
+    public function progressbars(){
+        return view('admin/ui-kit/progressbars');
+    }
+
+    public function notifications(){
+        return view('admin/ui-kit/notifications');
+    }
+
+    public function carousel(){
+        return view('admin/ui-kit/carousel');
+    }
+
+    public function video(){
+        return view('admin/ui-kit/video');
+    }
+
+    public function tooltipspopovers(){
+        return view('admin/ui-kit/tooltipspopovers');
+    }
+
+    public function images(){
+        return view('admin/ui-kit/images');
+    }
+
+    public function bootstrap(){
+        return view('admin/ui-kit/bootstrap');
+    }
+
 }

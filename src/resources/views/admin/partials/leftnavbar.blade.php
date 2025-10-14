@@ -136,17 +136,17 @@
                     </a>
 
                     <ul class="nav-second-level" aria-expanded="false">
-                        <li><a href="admin-grid.html">Grid</a></li>
-                        <li><a href="admin-sweet-alert.html">Sweet Alert</a></li>
-                        <li><a href="admin-tiles.html">Tiles Box</a></li>
-                        <li><a href="admin-nestable.html">Nestable List</a></li>
-                        <li><a href="admin-rangeslider.html">Range Slider</a></li>
-                        <li><a href="admin-ratings.html">Ratings</a></li>
-                        <li><a href="admin-filemanager.html">File Manager</a></li>
-                        <li><a href="admin-lightbox.html">Lightbox</a></li>
-                        <li><a href="admin-scrollbar.html">Scroll bar</a></li>
-                        <li><a href="admin-slider.html">Slider</a></li>
-                        <li><a href="admin-treeview.html">Treeview</a></li>
+                        <li><a href="{{route('admin.ui.grid')}}">Grid</a></li>
+                        <li><a href="{{route('admin.ui.sweetalert')}}">Sweet Alert</a></li>
+                        <li><a href="{{route('admin.ui.tilesbox')}}">Tiles Box</a></li>
+                        <li><a href="{{route('admin.ui.nestable')}}">Nestable List</a></li>
+                        <li><a href="{{route('admin.ui.rangeslider')}}">Range Slider</a></li>
+                        <li><a href="{{route('admin.ui.ratings')}}">Ratings</a></li>
+                        <li><a href="{{route('admin.ui.filemanager')}}">File Manager</a></li>
+                        <li><a href="{{route('admin.ui.lightbox')}}">Lightbox</a></li>
+                        <li><a href="{{route('admin.ui.scrollbar')}}">Scroll bar</a></li>
+                        <li><a href="{{route('admin.ui.slider')}}">Slider</a></li>
+                        <li><a href="{{route('admin.ui.treeview')}}">Treeview</a></li>
                     </ul>
                 </li>
 
@@ -158,22 +158,22 @@
                     </a>
 
                     <ul class="nav-second-level" aria-expanded="false">
-                        <li><a href="ui-typography.html">Typography</a></li>
-                        <li><a href="ui-cards.html">Cards</a></li>
-                        <li><a href="ui-buttons.html">Buttons</a></li>
-                        <li><a href="ui-modals.html">Modals</a></li>
-                        <li><a href="ui-checkbox-radio.html">Checkboxs-Radios</a></li>
-                        <li><a href="ui-spinners.html">Spinners</a></li>
-                        <li><a href="ui-ribbons.html">Ribbons</a></li>
-                        <li><a href="ui-portlets.html">Portlets</a></li>
-                        <li><a href="ui-tabs.html">Tabs</a></li>
-                        <li><a href="ui-progressbars.html">Progress Bars</a></li>
-                        <li><a href="ui-notifications.html">Notification</a></li>
-                        <li><a href="ui-carousel.html">Carousel</a></li>
-                        <li><a href="ui-video.html">Video</a></li>
-                        <li><a href="ui-tooltips-popovers.html">Tooltips &amp; Popovers</a></li>
-                        <li><a href="ui-images.html">Images</a></li>
-                        <li><a href="ui-bootstrap.html">Bootstrap UI</a></li>
+                        <li><a href="{{route('admin.ui.kit.typography')}}">Typography</a></li>
+                        <li><a href="{{route('admin.ui.kit.cards')}}">Cards</a></li>
+                        <li><a href="{{route('admin.ui.kit.buttons')}}">Buttons</a></li>
+                        <li><a href="{{route('admin.ui.kit.modals')}}">Modals</a></li>
+                        <li><a href="{{route('admin.ui.kit.checkbox-radio')}}">Checkboxs-Radios</a></li>
+                        <li><a href="{{route('admin.ui.kit.spinners')}}">Spinners</a></li>
+                        <li><a href="{{route('admin.ui.kit.ribbons')}}">Ribbons</a></li>
+                        <li><a href="{{route('admin.ui.kit.portlets')}}">Portlets</a></li>
+                        <li><a href="{{route('admin.ui.kit.tabs')}}">Tabs</a></li>
+                        <li><a href="{{route('admin.ui.kit.progressbars')}}">Progress Bars</a></li>
+                        <li><a href="{{route('admin.ui.kit.notifications')}}">Notification</a></li>
+                        <li><a href="{{route('admin.ui.kit.carousel')}}">Carousel</a></li>
+                        <li><a href="{{route('admin.ui.kit.video')}}">Video</a></li>
+                        <li><a href="{{route('admin.ui.kit.tooltips-popovers')}}">Tooltips &amp; Popovers</a></li>
+                        <li><a href="{{route('admin.ui.kit.images')}}">Images</a></li>
+                        <li><a href="{{route('admin.ui.kit.bootstrap')}}">Bootstrap UI</a></li>
                     </ul>
                 </li>
 
