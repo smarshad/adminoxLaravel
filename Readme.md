@@ -105,6 +105,13 @@ Step 3: Update Configuration for New Project
     DB_DATABASE=my_new_project_db
     APP_NAME="My New Project"
 
+    and in docker-compose.override.yml (two places)
+     networks:
+      - adminoxlaravel_network
+    # Network connection
+    networks:
+      - adminoxlaravel_network
+
     Or use sed to automate:
 
     sed -i 's/PROJECT_NAME=adminoxlaravel/PROJECT_NAME=my-new-project/g' .env.docker
