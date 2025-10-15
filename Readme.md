@@ -54,3 +54,26 @@ php artisan config:clear
 php artisan cache:clear
 php artisan migrate
 
+
+Let's verify the configuration is working:
+1. Check the full configuration to see if variables are properly set:
+    docker compose --env-file .env.docker config
+
+2. Or check specific services to see if the variables are interpolated:
+
+    # Check container names
+    docker compose --env-file .env.docker config | grep "container_name"
+
+    # Check network configuration
+    docker compose --env-file .env.docker config | grep "network"
+
+    # Check ports
+    docker compose --env-file .env.docker config | grep "ports"
+
+3. Now start your containers:
+    docker compose --env-file .env.docker up -d
+
+4. Check if containers are running:
+    docker ps
+
+

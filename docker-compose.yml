@@ -1,85 +1,68 @@
-# version: "3.9"  # Docker Compose file format version
-
 services:
-  # --------------------------
-  # MySQL Service
-  # --------------------------
   mysql:
-    image: mysql:8.0  # Use MySQL 8 official image
-    container_name: laravel-mysql-qjadmin  # Name of the container
-    restart: unless-stopped  # Always restart unless explicitly stopped
-    environment:  # Environment variables for MySQL
-      MYSQL_ROOT_PASSWORD: ${DB_ROOT_PASSWORD}  # Root password from .env
-      MYSQL_DATABASE: ${DB_DATABASE}           # Default DB to create
-      MYSQL_USER: ${DB_USERNAME}               # User to create
-      MYSQL_PASSWORD: ${DB_PASSWORD}           # Password for the user
+    image: mysql:8.0
+    container_name: ${PROJECT_NAME}-mysql
+    restart: unless-stopped
+    environment:
+      MYSQL_ROOT_PASSWORD: ${DB_ROOT_PASSWORD}
+      MYSQL_DATABASE: ${DB_DATABASE}
+      MYSQL_USER: ${DB_USERNAME}
+      MYSQL_PASSWORD: ${DB_PASSWORD}
     ports:
-      - "3307:3306"  # Map host port 3307 to container port 3306
+      - "${MYSQL_PORT}:3306"
     volumes:
-      - mysql_data:/var/lib/mysql  # Persist database data
-      - ./docker/mysql-init:/docker-entrypoint-initdb.d  # Auto-run SQL scripts on first start
+      - mysql_data:/var/lib/mysql
+      - ./docker/mysql-init:/docker-entrypoint-initdb.d
     networks:
-      - laravel  # Attach to laravel network
-    healthcheck:  # Check if MySQL is ready
+      - adminoxlaravel_network
+    healthcheck:
       test: ["CMD", "mysqladmin", "ping", "-h", "localhost"]
       interval: 5s
       timeout: 5s
       retries: 5
       start_period: 10s
 
-  # --------------------------
-  # Laravel PHP Application
-  # --------------------------
   app:
     build:
-      context: .  # Build context is current folder
-      dockerfile: docker/php/Dockerfile  # Dockerfile location for PHP container
-    container_name: laravel-app-qjadmin
+      context: .
+      dockerfile: docker/php/Dockerfile
+    container_name: ${PROJECT_NAME}-app
     volumes:
-      - ./src:/var/www/html  # Mount project code into container
-      - ./src/storage:/var/www/html/storage  # Ensure Laravel storage is writable
-      - ./src/bootstrap/cache:/var/www/html/bootstrap/cache  # Ensure cache is writable
-    # user: "1000:1000" # optional: match host user (for local dev)
-
+      - ./src:/var/www/html
+      - ./src/storage:/var/www/html/storage
+      - ./src/bootstrap/cache:/var/www/html/bootstrap/cache
     environment:
-      APP_ENV: ${APP_ENV}  # Laravel environment (local/production)
-      APP_DEBUG: ${APP_DEBUG}  # Debug mode true/false
-      DB_CONNECTION: mysql  # DB driver
-      DB_HOST: mysql        # DB host (MySQL container name)
-      DB_PORT: 3306         # MySQL port inside container
-      DB_DATABASE: ${DB_DATABASE}  # Database name from .env
-      DB_USERNAME: ${DB_USERNAME}  # Database username from .env
-      DB_PASSWORD: ${DB_PASSWORD}  # Database password from .env
+      APP_ENV: ${APP_ENV}
+      APP_DEBUG: ${APP_DEBUG}
+      DB_CONNECTION: mysql
+      DB_HOST: ${PROJECT_NAME}-mysql
+      DB_PORT: 3306
+      DB_DATABASE: ${DB_DATABASE}
+      DB_USERNAME: ${DB_USERNAME}
+      DB_PASSWORD: ${DB_PASSWORD}
     depends_on:
       mysql:
-        condition: service_healthy  # Wait until MySQL is ready
+        condition: service_healthy
     networks:
-      - laravel  # Attach to same network as MySQL
+      - adminoxlaravel_network
 
-  # --------------------------
-  # Nginx Web Server
-  # --------------------------
   nginx:
-    image: nginx:latest  # Use official Nginx image
-    container_name: laravel-nginx-qjadmin
+    image: nginx:latest
+    container_name: ${PROJECT_NAME}-nginx
     ports:
-      - "${NGINX_PORT}:80"  # Map host port (from .env) to container port 80
+      - "${NGINX_PORT}:80"
     volumes:
-      - ./src:/var/www/html  # Mount project code
-      - ./docker/nginx/default.conf:/etc/nginx/conf.d/default.conf  # Custom Nginx config
+      - ./src:/var/www/html
+      - ./docker/nginx/default.conf:/etc/nginx/conf.d/default.conf
     depends_on:
-      - app  # Ensure PHP container is up before Nginx
+      - app
     networks:
-      - laravel  # Same network as app & MySQL
+      - adminoxlaravel_network
 
-# --------------------------
-# Networks
-# --------------------------
-networks:
-  laravel:  # User-defined network for all containers
-
-# --------------------------
-# Volumes
-# --------------------------
 volumes:
-  mysql_data:  # Persist MySQL data across container restarts
+  mysql_data:
+
+networks:
+  adminoxlaravel_network:
+    name: ${PROJECT_NAME}_network
+    driver: bridge
